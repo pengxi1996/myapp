@@ -1,6 +1,6 @@
 
 <div *ngIf="test">
-    <h2>{{test.name | uppercase}} Details</h2>
+    <h2 [class.check]="test.name">{{test.name | uppercase}} Details</h2>
     <div><span>id: </span>{{test.id}}</div>
     <div>
       <label>name:
