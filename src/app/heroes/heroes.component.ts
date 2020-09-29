@@ -10,12 +10,12 @@ import { MessageService } from '../message.service'
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
-  selectedHero: Hero;
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`Hero组件选择了id为${hero.id}的人员`)
+  // selectedHero: Hero;
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`Hero组件选择了id为${hero.id}的人员`)
 
-  }
+  // }
   constructor(private heroService: HeroService, private messageService: MessageService) { }
 
   ngOnInit(): void {
