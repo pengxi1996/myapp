@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  @Input() test: Hero;
+  @Input() hero: Hero;
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
@@ -26,11 +26,15 @@ export class HeroDetailComponent implements OnInit {
 
     this.heroService.getHero(id).subscribe(hero => {
       console.log(hero);
-      
-      // this.test = hero
+
+      this.hero = hero
     })
   }
   goBack() {
     this.location.back()
+  }
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
   }
 }

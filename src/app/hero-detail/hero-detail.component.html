@@ -1,10 +1,11 @@
 <button (click)="goBack()">goBack</button>
-<div *ngIf="test">
-    <h2 [class.check]="test.name">{{test.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{test.id}}</div>
+<button (click)="save()">保存</button>
+<div *ngIf="hero">
+    <h2 [class.check]="hero.name">{{hero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
     <div>
       <label>name:
-        <input [(ngModel)]="test.name" placeholder="name" />
+        <input [(ngModel)]="hero.name" placeholder="name" />
       </label>
     </div>
   </div>
